@@ -1,0 +1,6 @@
+@Aurora.Bizware.Api_HostAddress = http://localhost:5209
+
+GET {{Aurora.Bizware.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

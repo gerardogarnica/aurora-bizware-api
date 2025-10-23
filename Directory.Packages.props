@@ -2,8 +2,9 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
-
   <ItemGroup>
+    <!-- Microsoft -->
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" />
     <!-- SonarAnalyzer -->
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
   </ItemGroup>
