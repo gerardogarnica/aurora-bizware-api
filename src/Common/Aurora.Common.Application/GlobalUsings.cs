@@ -1,0 +1,11 @@
+﻿global using Aurora.Common.Application.Behaviors;
+global using Aurora.Common.Application.Messaging;
+global using Aurora.Common.Domain.Collections;
+global using Aurora.Common.Domain.Errors;
+global using Aurora.Common.Domain.Events;
+global using Aurora.Common.Domain.Results;
+global using FluentValidation;
+global using FluentValidation.Results;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Logging;
