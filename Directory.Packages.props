@@ -8,6 +8,10 @@
     <!-- Microsoft -->
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.10" />
+    <!-- Newtonsoft -->
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+    <!-- Quartz -->
+    <PackageVersion Include="Quartz.Extensions.Hosting" Version="3.15.0" />
     <!-- Scrutor -->
     <PackageVersion Include="Scrutor" Version="6.1.0" />
     <!-- SonarAnalyzer -->
