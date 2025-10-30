@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Aurora.Common.Infrastructure.Persistence\Aurora.Common.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\..\..\Common\Aurora.Common.Infrastructure\Aurora.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\Aurora.Modules.Identity.Features\Aurora.Modules.Identity.Features.csproj" />
+  </ItemGroup>
+
+</Project>

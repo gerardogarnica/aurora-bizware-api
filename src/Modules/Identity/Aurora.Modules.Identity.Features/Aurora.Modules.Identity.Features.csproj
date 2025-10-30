@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Aurora.Common.Application\Aurora.Common.Application.csproj" />
+    <ProjectReference Include="..\..\..\Common\Aurora.Common.Endpoints\Aurora.Common.Endpoints.csproj" />
+    <ProjectReference Include="..\Aurora.Modules.Identity.Domain\Aurora.Modules.Identity.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
