@@ -1,0 +1,13 @@
+﻿global using Aurora.Common.Application.Data;
+global using Aurora.Common.Application.Messaging;
+global using Aurora.Common.Domain.Results;
+global using Aurora.Common.Endpoints;
+global using Aurora.Modules.Identity.Domain.Permissions;
+global using Aurora.Modules.Identity.Domain.Roles;
+global using Aurora.Modules.Identity.Domain.Users;
+global using FluentValidation;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.EntityFrameworkCore;
