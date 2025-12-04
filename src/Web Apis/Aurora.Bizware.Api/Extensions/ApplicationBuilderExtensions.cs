@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace Aurora.Bizware.Api.Extensions;
 
-public static class ApplicationBuilderExtensions
+internal static class ApplicationBuilderExtensions
 {
-    public static IServiceCollection AddSwaggerGenWithAuth(this IServiceCollection services)
+    internal static IServiceCollection AddSwaggerGenWithAuth(this IServiceCollection services)
     {
         services.AddSwaggerGen(options =>
         {
@@ -27,7 +27,7 @@ public static class ApplicationBuilderExtensions
         return services;
     }
 
-    public static IApplicationBuilder UseSwaggerWithUI(this WebApplication app)
+    internal static IApplicationBuilder UseSwaggerWithUI(this WebApplication app)
     {
         app.UseSwagger();
 

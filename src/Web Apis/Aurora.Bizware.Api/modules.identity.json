@@ -1,0 +1,12 @@
+{
+  "Identity": {
+    "Inbox": {
+      "IntervalInSeconds": 5,
+      "BatchSize": 100
+    },
+    "Outbox": {
+      "IntervalInSeconds": 5,
+      "BatchSize": 100
+    }
+  }
+}
