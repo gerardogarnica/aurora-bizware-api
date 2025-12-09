@@ -2,7 +2,6 @@
 using Aurora.Common.Infrastructure.DomainEvents;
 using Aurora.Common.Infrastructure.Time;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Quartz;
 
 namespace Aurora.Common.Infrastructure;

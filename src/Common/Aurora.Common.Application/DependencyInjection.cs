@@ -7,28 +7,28 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddCommonApplicationServices(
         this IServiceCollection services,
-        Assembly assembly) => services
-            .AddMessagingHandlers(assembly)
+        Assembly[] assemblies) => services
+            .AddMessagingHandlers(assemblies)
             .AddBehaviors()
-            .AddDomainHandlers(assembly)
-            .AddValidators(assembly);
+            .AddDomainHandlers(assemblies)
+            .AddValidators(assemblies);
 
-    private static IServiceCollection AddMessagingHandlers(this IServiceCollection services, Assembly assembly)
+    private static IServiceCollection AddMessagingHandlers(this IServiceCollection services, Assembly[] assemblies)
     {
         services
-            .Scan(scan => scan.FromAssemblies(assembly)
+            .Scan(scan => scan.FromAssemblies(assemblies)
             .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>)), publicOnly: false)
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
         services
-            .Scan(scan => scan.FromAssemblies(assembly)
+            .Scan(scan => scan.FromAssemblies(assemblies)
             .AddClasses(classes => classes.AssignableTo(typeof(ICommandHandler<>)), publicOnly: false)
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
         services
-            .Scan(scan => scan.FromAssemblies(assembly)
+            .Scan(scan => scan.FromAssemblies(assemblies)
             .AddClasses(classes => classes.AssignableTo(typeof(ICommandHandler<,>)), publicOnly: false)
             .AsImplementedInterfaces()
             .WithScopedLifetime());
@@ -52,10 +52,10 @@ public static class DependencyInjection
         return services;
     }
 
-    private static IServiceCollection AddDomainHandlers(this IServiceCollection services, Assembly assembly)
+    private static IServiceCollection AddDomainHandlers(this IServiceCollection services, Assembly[] assemblies)
     {
         services
-            .Scan(scan => scan.FromAssemblies(assembly)
+            .Scan(scan => scan.FromAssemblies(assemblies)
             .AddClasses(classes => classes.AssignableTo(typeof(IDomainEventHandler<>)), publicOnly: false)
             .AsImplementedInterfaces()
             .WithScopedLifetime());
@@ -63,9 +63,9 @@ public static class DependencyInjection
         return services;
     }
 
-    private static IServiceCollection AddValidators(this IServiceCollection services, Assembly assembly)
+    private static IServiceCollection AddValidators(this IServiceCollection services, Assembly[] assemblies)
     {
-        services.AddValidatorsFromAssembly(assembly, includeInternalTypes: true);
+        services.AddValidatorsFromAssemblies(assemblies, includeInternalTypes: true);
 
         return services;
     }
