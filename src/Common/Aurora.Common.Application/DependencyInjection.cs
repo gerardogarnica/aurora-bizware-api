@@ -5,7 +5,7 @@ namespace Aurora.Common.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddCommonApplicationServices(
+    public static IServiceCollection AddApplicationServices(
         this IServiceCollection services,
         Assembly[] assemblies) => services
             .AddMessagingHandlers(assemblies)

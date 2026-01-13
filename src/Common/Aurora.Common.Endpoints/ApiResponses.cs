@@ -27,7 +27,7 @@ public static class ApiResponses
         ErrorType.Failure => "https://tools.ietf.org/html/rfc7231#section-6.6.1",
         ErrorType.Validation => "https://tools.ietf.org/html/rfc7231#section-6.5.1",
         ErrorType.Problem => "https://tools.ietf.org/html/rfc7231#section-6.5.1",
-        ErrorType.NotFound => "https://tools.ietf.org/html/rfc7231#section-6.5.4",
+        ErrorType.NotFound => "https://tools.ietf.org/html/rfc7231#section-6.3.5",
         ErrorType.Conflict => "https://tools.ietf.org/html/rfc7231#section-6.5.8",
         _ => "https://tools.ietf.org/html/rfc7231#section-6.6.1"
     };
@@ -37,7 +37,7 @@ public static class ApiResponses
         ErrorType.Failure => StatusCodes.Status500InternalServerError,
         ErrorType.Validation => StatusCodes.Status400BadRequest,
         ErrorType.Problem => StatusCodes.Status400BadRequest,
-        ErrorType.NotFound => StatusCodes.Status404NotFound,
+        ErrorType.NotFound => StatusCodes.Status204NoContent,
         ErrorType.Conflict => StatusCodes.Status409Conflict,
         _ => StatusCodes.Status500InternalServerError
     };
